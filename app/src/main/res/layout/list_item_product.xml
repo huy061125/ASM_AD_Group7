@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/btec"
+        android:id="@+id/imgProduct"
+        android:contentDescription="Image Product"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iphone 16 pro max"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:layout_toEndOf="@+id/imgProduct"
+        android:layout_marginStart="20sp"
+        android:id="@+id/tvNameProduct"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30.000.000 VND"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_toEndOf="@+id/imgProduct"
+        android:layout_below="@+id/tvNameProduct"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/tvPriceProduct"/>
+
+
+</RelativeLayout>

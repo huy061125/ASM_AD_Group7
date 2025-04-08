@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:id="@+id/menu_home"
+        android:icon="@drawable/home_apdp"/>
+
+    <item
+        android:title="Expensive"
+        android:id="@+id/menu_expense"
+        android:icon="@drawable/money_apdp"/>
+
+    <item
+        android:title="Budget"
+        android:id="@+id/menu_budget"
+        android:icon="@drawable/wallet_apdp"/>
+
+    <item
+        android:title="Setting"
+        android:id="@+id/menu_setting"
+        android:icon="@drawable/setting_apdp"/>
+</menu>

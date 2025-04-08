@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Thanh tiêu đề -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Budget Setting"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="12dp"/>
+
+    <!-- Chọn nhóm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_card_light"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="8dp"
+            android:src="@drawable/transaction"/>
+
+        <Spinner
+            android:id="@+id/category_edit_budget_spinner"
+            android:layout_width="match_parent"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:theme="@style/CustomSpinnerStyle"
+            />
+    </LinearLayout>
+
+    <!-- Số tiền -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_light"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp">
+
+
+
+        <EditText
+            android:id="@+id/edtBudgetAmount"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter the amount"
+            android:inputType="numberDecimal"
+            android:textColor="#00D507"
+            android:textSize="18sp"
+            android:background="@null"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Thời gian -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_light"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/calendars"/>
+
+        <EditText
+            android:id="@+id/edtBudgetDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select a date"
+            android:textColor="#000000"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@null"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <!-- Checkbox lặp lại ngân sách -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnCancelBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:backgroundTint="#FF0000"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
