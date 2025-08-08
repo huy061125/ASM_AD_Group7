@@ -44,4 +44,5 @@ dependencies {
     androidTestImplementation libs.espresso.core
     implementation libs.picasso
     implementation libs.material.v180
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

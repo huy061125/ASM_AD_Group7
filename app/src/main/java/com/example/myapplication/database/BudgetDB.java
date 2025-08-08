@@ -260,6 +260,32 @@ public class BudgetDB extends SQLiteOpenHelper {
         db.close();
         return categories;
     }
+    public double getTotalSetBudget(int userId) {
+        double totalBudget = 0;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor budgetCursor = db.rawQuery("SELECT SUM(amount) FROM " + DB_TABLE + " WHERE user_id = ?",
+                new String[]{String.valueOf(userId)});
+        if (budgetCursor.moveToFirst()) {
+            totalBudget = budgetCursor.getDouble(0);
+        }
+        budgetCursor.close();
+        db.close();
+        return totalBudget;
+    }
+
+    // Add this method to BudgetDB.java
+    public double getTotalExpenses(int userId) {
+        double totalExpenses = 0;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor expenseCursor = db.rawQuery("SELECT SUM(amount) FROM " + EXPENSE_TABLE + " WHERE user_id = ?",
+                new String[]{String.valueOf(userId)});
+        if (expenseCursor.moveToFirst()) {
+            totalExpenses = expenseCursor.getDouble(0);
+        }
+        expenseCursor.close();
+        db.close();
+        return totalExpenses;
+    }
 
 
 

@@ -3,26 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
-    android:orientation="vertical"
-    android:background="@color/white"
-    android:padding="15dp">
+    android:padding="16dp"
+    tools:context=".HomeFragment">
 
     <TextView
+        android:id="@+id/tvSummaryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Product List"
+        android:layout_centerHorizontal="true"
+        android:text="Financial Summary"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/tvTitle"/>
+        android:layout_marginBottom="16dp"/>
 
-    <ListView
+    <TextView
+        android:id="@+id/tvSummaryValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSummaryTitle"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        tools:text="Budget: $1000 | Expenses: $450"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/tvTitle"
-        android:id="@+id/lvProductList"/>
+        android:layout_below="@id/tvSummaryValues" />
 
 </RelativeLayout>
